@@ -2,8 +2,12 @@
   "compilerOptions": {
     "outDir": "./dist/",
     "baseUrl": ".",
+    "paths": {
+      "*": ["./src/*"]
+    },
     "noImplicitAny": true,
     "module": "ESNext",
+    "lib": ["dom", "dom.iterable", "esnext"],
     "target": "es5",
     "jsx": "react-jsx",
     "allowJs": true,
