@@ -1,13 +1,14 @@
-import React, { Suspense } from 'react';
-import { classNames } from 'shared/lib/classNames/classNames';
-import './styles/index.scss';
-import { useTheme } from './providers/ThemeProvider';
-import { AppRouter } from './providers/router';
-import { Navbar } from 'widgets/Navbar';
-import { Sidebar } from 'widgets/Sidebar';
+import React from 'react'
+import { Suspense } from 'react'
+import { classNames } from 'shared/lib/classNames/classNames'
+import './styles/index.scss'
+import { useTheme } from './providers/ThemeProvider'
+import { AppRouter } from './providers/router'
+import { Navbar } from 'widgets/Navbar'
+import { Sidebar } from 'widgets/Sidebar'
 
-const App: React.FC = ({}) => {
-  const { theme } = useTheme();
+const App: React.FC = () => {
+  const { theme } = useTheme()
 
   return (
     <div className={classNames('app', { hovered: true }, [theme])}>
@@ -19,7 +20,7 @@ const App: React.FC = ({}) => {
         </div>
       </Suspense>
     </div>
-  );
-};
+  )
+}
 
-export default App;
+export default App
