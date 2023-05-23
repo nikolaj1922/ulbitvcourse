@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Suspense } from 'react'
 import { classNames } from 'shared/lib/classNames/classNames'
 import './styles/index.scss'
@@ -11,15 +11,15 @@ const App: React.FC = () => {
   const { theme } = useTheme()
 
   return (
-    <div className={classNames('app', { hovered: true }, [theme])}>
-      <Suspense fallback="">
+    <React.Suspense fallback="">
+      <div className={classNames('app', { hovered: true }, [theme])}>
         <Navbar />
         <div className="content-page">
           <Sidebar />
           <AppRouter />
         </div>
-      </Suspense>
-    </div>
+      </div>
+    </React.Suspense>
   )
 }
 
